@@ -1,50 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Header } from "./Header";
+import Footer from "./Footer";
+import { Content } from "./Content";
 
 function App() {
-//js.....
-//every tag must be closed
-//only one root element
-var a =100;
-var name ="royal"
-var isActive =false
-var user ={
-  name:"raj",
-  age:20,
-}
-var students = [
-  {
-    id:1,
-    name:"amit",
-  },
-  {
-    id:2,
-    name:"ram",
+  var title = "ROYAL TECHNOSOFT"
+  var estd = 2006
+  
+  var detail ={
+    city:"Ahmedabad",
+    area:"CG ROAD"
   }
-
-]
-
-
   return (
     <div className="App">
-      <h1>HELLO</h1>
-      {a}
-      <h1>{a}</h1>
-      <h2>Institute Name = {name}</h2>
-      <h3>STATUS = {isActive == true ? "Active" :"Not Active"}</h3>
-      <h2>
-        User Name ={user.name}
-      </h2>
-      <h3>Age = {user.age}</h3>
-      {
-        students.map((stu)=>{
-          return(<div>
-            <h1>Student Name = {stu.name}</h1>
-            <h2>Student Id = {stu.id}</h2>
-          </div>)
-        })
-      }
-
+      <Header t = {title}  estd = {estd} detail ={detail}/>
+      {/* <Header title = {title} /> */}
+      <Content detail ={detail} />
+      <Footer />
     </div>
   );
 }
