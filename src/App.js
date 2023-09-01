@@ -3,6 +3,7 @@ import "./App.css";
 import { Header } from "./Header";
 import Footer from "./Footer";
 import { Content } from "./Content";
+import { Users } from "./users/Users";
 
 function App() {
   var title = "ROYAL TECHNOSOFT"
@@ -16,7 +17,8 @@ function App() {
     <div className="App">
       <Header t = {title}  estd = {estd} detail ={detail}/>
       {/* <Header title = {title} /> */}
-      <Content detail ={detail} />
+      {/* <Content detail ={detail} /> */}
+      <Users/>
       <Footer />
     </div>
   );
