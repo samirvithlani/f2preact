@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import Footer from "./Footer";
 import { Content } from "./Content";
 import { Users } from "./users/Users";
+import { UserReg } from "./users/UserReg";
 
 function App() {
   var title = "ROYAL TECHNOSOFT"
@@ -19,7 +20,8 @@ function App() {
       {/* <Header title = {title} /> */}
       {/* <Content detail ={detail} /> */}
       <Users/>
-      <Footer />
+      
+      {/* <Footer /> */}
     </div>
   );
 }
