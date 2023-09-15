@@ -5,6 +5,8 @@ import Footer from "./Footer";
 import { Content } from "./Content";
 import { Users } from "./users/Users";
 import { UserReg } from "./users/UserReg";
+import { UsersAdd } from "./users/UsersAdd";
+import { StudentAdd } from "./users/StudentAdd";
 
 function App() {
   var title = "ROYAL TECHNOSOFT"
@@ -19,8 +21,9 @@ function App() {
       <Header t = {title}  estd = {estd} detail ={detail}/>
       {/* <Header title = {title} /> */}
       {/* <Content detail ={detail} /> */}
-      <Users/>
-      
+      {/* <Users/> */}
+      {/* <UsersAdd/> */}
+      <StudentAdd/>
       {/* <Footer /> */}
     </div>
   );
