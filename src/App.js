@@ -7,6 +7,7 @@ import { Users } from "./users/Users";
 import { UserReg } from "./users/UserReg";
 import { UsersAdd } from "./users/UsersAdd";
 import { StudentAdd } from "./users/StudentAdd";
+import { EmployeeAdd } from "./users/EmployeeAdd";
 
 function App() {
   var title = "ROYAL TECHNOSOFT"
@@ -23,8 +24,9 @@ function App() {
       {/* <Content detail ={detail} /> */}
       {/* <Users/> */}
       {/* <UsersAdd/> */}
-      <StudentAdd/>
+      {/* <StudentAdd/> */}
       {/* <Footer /> */}
+      <EmployeeAdd/>
     </div>
   );
 }
