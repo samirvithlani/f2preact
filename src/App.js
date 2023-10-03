@@ -17,6 +17,9 @@ import { ContactManager } from "./employee/ContactManager";
 import { ContactCEO } from "./employee/ContactCEO";
 import { ContactDevelopers } from "./employee/ContactDevelopers";
 import { AboutCompany } from "./employee/AboutCompany";
+import { ApiDemo1 } from "./api/ApiDemo1";
+import { ApiDemo2 } from "./api/ApiDemo2";
+import { ApiDemo3 } from "./api/ApiDemo3";
 
 function App() {
   var title = "ROYAL TECHNOSOFT";
@@ -45,6 +48,9 @@ function App() {
         <Route path="/contactemp/ceo" element={<ContactCEO />}></Route>
         <Route path="/contactemp/dev" element={<ContactDevelopers />}></Route>
         <Route path="/aboutcompany/:id" element={<AboutCompany/>}></Route>
+        <Route path="/apidemo1" element={<ApiDemo1/>}></Route>
+        <Route path="/apidemo2" element={<ApiDemo2/>}></Route>
+        <Route path="/apidemo3" element={<ApiDemo3/>}></Route>
       </Routes>
       <Footer />
     </div>

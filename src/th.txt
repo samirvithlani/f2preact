@@ -1,0 +1,26 @@
+API -->application prog interface....
+
+backend  --: node,java,php,.net --> expose... url --> display..
+google map --> url --> param --> results
+
+api consume --> 
+
+REQUEST METHODS
+
+GET : get response from server /api
+POST : add data to server /api
+PUT  : update data to server /api
+DELETE : delete data from server /api
+PATCH : update data to server /api
+
+
+dummy api --> 
+host ->
+paid -->
+
+data --> JSON -->
+status code -->HTTP STATUS CODE --> 
+
+only get api can called in browser.... test..
+other api need to call from any tech...   postman,....
+
