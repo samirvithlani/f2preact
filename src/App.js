@@ -23,6 +23,8 @@ import { ApiDemo3 } from "./api/ApiDemo3";
 import { ApiDemoPost } from "./api/ApiDemoPost";
 import { AddUSers } from "./api/AddUSers";
 import { ApiDemo6 } from "./api/ApiDemo6";
+import { Count } from "./Count";
+import { Weatherapp } from "./api/Weatherapp";
 
 function App() {
   var title = "ROYAL TECHNOSOFT";
@@ -51,6 +53,8 @@ function App() {
         <Route path="/contactemp/ceo" element={<ContactCEO />}></Route>
         <Route path="/contactemp/dev" element={<ContactDevelopers />}></Route>
         <Route path="/aboutcompany/:id" element={<AboutCompany/>}></Route>
+        <Route path="/count" element={<Count/>}></Route>
+        <Route path="/weatherapp" element={<Weatherapp/>}></Route>
         <Route path="/apidemo1" element={<ApiDemo1/>}></Route>
         <Route path="/apidemo2" element={<ApiDemo2/>}></Route>
         <Route path="/apidemo3" element={<ApiDemo3/>}></Route>

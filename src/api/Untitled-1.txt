@@ -1,0 +1,13 @@
+db.students.insert([{_id:1,name:"raj",age:22,gender:"male",course:{name:"sci"},marks:200}])
+
+mongo db aggreagete:
+1)find all student match with gender male / female 
+2)get all sci student data marks > 200
+3)get all female student data name start with "a" and age > 20
+4)get all student data marks > 200 and age > 20
+5)gel=t all arts girls student data
+6) sort all student data by marks
+7)sort course by total marks
+8)sort course by total marks and get only top 3
+9)sort course by total marks and get only top 3 and skip 1
+10)get comm course boys data in assending order by age
