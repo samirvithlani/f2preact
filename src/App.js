@@ -25,6 +25,8 @@ import { AddUSers } from "./api/AddUSers";
 import { ApiDemo6 } from "./api/ApiDemo6";
 import { Count } from "./Count";
 import { Weatherapp } from "./api/Weatherapp";
+import { UserDetail } from "./api/UserDetail";
+import { EditUserDetail } from "./api/EditUserDetail";
 
 function App() {
   var title = "ROYAL TECHNOSOFT";
@@ -61,6 +63,8 @@ function App() {
         <Route path="/apidemo4" element={<ApiDemoPost/>}></Route>
         <Route path="/apidemo5" element={<AddUSers/>}></Route>
         <Route path="/apidemo6" element={<ApiDemo6/>}></Route>
+        <Route path = "/user/detail/:id" element={<UserDetail/>}></Route>
+        <Route path = "/user/edit/:id" element={<EditUserDetail/>}></Route>
       </Routes>
       <Footer />
     </div>
