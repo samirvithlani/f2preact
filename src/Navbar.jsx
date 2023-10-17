@@ -75,7 +75,11 @@ export const Navbar = () => {
               weatherapp
               </Link>
             </li>   
-            
+            <li class="nav-item">
+              <Link class="nav-link" to="/students">
+              students
+              </Link>
+            </li>   
           </ul>
         </div>
       </nav>
