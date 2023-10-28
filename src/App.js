@@ -28,6 +28,11 @@ import { Weatherapp } from "./api/Weatherapp";
 import { UserDetail } from "./api/UserDetail";
 import { EditUserDetail } from "./api/EditUserDetail";
 import { Students } from "./student/Students";
+import { Products } from "./product/Products";
+import { ProductContext } from "./product/ProductContext";
+import { useState } from "react";
+import { ProductCart } from "./product/ProductCart";
+import { LoginUser } from "./users/LoginUser";
 
 function App() {
   var title = "ROYAL TECHNOSOFT";
@@ -37,6 +42,10 @@ function App() {
     city: "Ahmedabad",
     area: "CG ROAD",
   };
+
+  var [sharedData, setsharedData] = useState()
+
+
   return (
     <div className="App">
       {/* <Header t = {title}  estd = {estd} detail ={detail}/> */}
@@ -47,28 +56,36 @@ function App() {
       {/* <StudentAdd/> */}
       {/* <Footer /> */}
       {/* <EmployeeAdd/> */}
-      <Navbar />
-      <Routes>
-        <Route path="/emplist" element={<EmployeeList />}></Route>
-        <Route path="/aboutemp" element={<AboutEmployee />}></Route>
-        <Route path="/contactemp" element={<ContactEmployee />}></Route>
-        <Route path="/contactemp/manager" element={<ContactManager />}></Route>
-        <Route path="/contactemp/ceo" element={<ContactCEO />}></Route>
-        <Route path="/contactemp/dev" element={<ContactDevelopers />}></Route>
-        <Route path="/aboutcompany/:id" element={<AboutCompany/>}></Route>
-        <Route path="/count" element={<Count/>}></Route>
-        <Route path="/weatherapp" element={<Weatherapp/>}></Route>
-        <Route path="/apidemo1" element={<ApiDemo1/>}></Route>
-        <Route path="/apidemo2" element={<ApiDemo2/>}></Route>
-        <Route path="/apidemo3" element={<ApiDemo3/>}></Route>
-        <Route path="/apidemo4" element={<ApiDemoPost/>}></Route>
-        <Route path="/apidemo5" element={<AddUSers/>}></Route>
-        <Route path="/apidemo6" element={<ApiDemo6/>}></Route>
-        <Route path = "/user/detail/:id" element={<UserDetail/>}></Route>
-        <Route path = "/user/edit/:id" element={<EditUserDetail/>}></Route>
-        <Route path ="/students" element ={<Students/>}></Route>
-      </Routes>
-      <Footer />
+      <ProductContext.Provider value={{sharedData,setsharedData}}>
+        <Navbar />
+        <Routes>
+          <Route path="/emplist" element={<EmployeeList />}></Route>
+          <Route path="/aboutemp" element={<AboutEmployee />}></Route>
+          <Route path="/contactemp" element={<ContactEmployee />}></Route>
+          <Route
+            path="/contactemp/manager"
+            element={<ContactManager />}
+          ></Route>
+          <Route path="/contactemp/ceo" element={<ContactCEO />}></Route>
+          <Route path="/contactemp/dev" element={<ContactDevelopers />}></Route>
+          <Route path="/aboutcompany/:id" element={<AboutCompany />}></Route>
+          <Route path="/count" element={<Count />}></Route>
+          <Route path="/weatherapp" element={<Weatherapp />}></Route>
+          <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+          <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+          <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
+          <Route path="/apidemo4" element={<ApiDemoPost />}></Route>
+          <Route path="/apidemo5" element={<AddUSers />}></Route>
+          <Route path="/apidemo6" element={<ApiDemo6 />}></Route>
+          <Route path="/user/detail/:id" element={<UserDetail />}></Route>
+          <Route path="/user/edit/:id" element={<EditUserDetail />}></Route>
+          <Route path="/students" element={<Students />}></Route>
+          <Route path="/products" element={<Products />}></Route>
+          <Route path = "/cart" element = {<ProductCart/>}></Route>
+          <Route path = "/login" element ={<LoginUser/>}></Route>
+        </Routes>
+      </ProductContext.Provider>
+      {/* <Footer /> */}
     </div>
   );
 }

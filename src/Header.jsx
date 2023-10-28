@@ -6,6 +6,7 @@ import React from "react";
 
 export const Header = (props) => {
   //console.log("header props...",props);
+  
   return (
     <div
       style={{
