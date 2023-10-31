@@ -33,6 +33,9 @@ import { ProductContext } from "./product/ProductContext";
 import { useState } from "react";
 import { ProductCart } from "./product/ProductCart";
 import { LoginUser } from "./users/LoginUser";
+import ProtectedRoutes from "./hooks/ProtectedRoutes";
+import { MuiDemo1 } from "./Material/MuiDemo1";
+import { MuiDemo2 } from "./Material/MuiDemo2";
 
 function App() {
   var title = "ROYAL TECHNOSOFT";
@@ -43,8 +46,7 @@ function App() {
     area: "CG ROAD",
   };
 
-  var [sharedData, setsharedData] = useState()
-
+  var [sharedData, setsharedData] = useState();
 
   return (
     <div className="App">
@@ -56,16 +58,20 @@ function App() {
       {/* <StudentAdd/> */}
       {/* <Footer /> */}
       {/* <EmployeeAdd/> */}
-      <ProductContext.Provider value={{sharedData,setsharedData}}>
+      <ProductContext.Provider value={{ sharedData, setsharedData }}>
         <Navbar />
         <Routes>
-          <Route path="/emplist" element={<EmployeeList />}></Route>
-          <Route path="/aboutemp" element={<AboutEmployee />}></Route>
-          <Route path="/contactemp" element={<ContactEmployee />}></Route>
-          <Route
-            path="/contactemp/manager"
-            element={<ContactManager />}
-          ></Route>
+          {/* //protected routes start */}
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/emplist" element={<EmployeeList />}></Route>
+            <Route path="/aboutemp" element={<AboutEmployee />}></Route>
+            <Route path="/contactemp" element={<ContactEmployee />}></Route>
+            <Route
+              path="/contactemp/manager"
+              element={<ContactManager />}
+            ></Route>
+          </Route>
+          {/* //protected routes end */}
           <Route path="/contactemp/ceo" element={<ContactCEO />}></Route>
           <Route path="/contactemp/dev" element={<ContactDevelopers />}></Route>
           <Route path="/aboutcompany/:id" element={<AboutCompany />}></Route>
@@ -81,8 +87,9 @@ function App() {
           <Route path="/user/edit/:id" element={<EditUserDetail />}></Route>
           <Route path="/students" element={<Students />}></Route>
           <Route path="/products" element={<Products />}></Route>
-          <Route path = "/cart" element = {<ProductCart/>}></Route>
-          <Route path = "/login" element ={<LoginUser/>}></Route>
+          <Route path="/cart" element={<ProductCart />}></Route>
+          <Route path="/login" element={<LoginUser />}></Route>
+          <Route path = "/muidemo1" element ={<MuiDemo2/>}></Route>
         </Routes>
       </ProductContext.Provider>
       {/* <Footer /> */}
