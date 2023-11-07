@@ -36,6 +36,8 @@ import { LoginUser } from "./users/LoginUser";
 import ProtectedRoutes from "./hooks/ProtectedRoutes";
 import { MuiDemo1 } from "./Material/MuiDemo1";
 import { MuiDemo2 } from "./Material/MuiDemo2";
+import { MuiTable } from "./Material/MuiTable";
+import { MuiTable2 } from "./Material/MuiTable2";
 
 function App() {
   var title = "ROYAL TECHNOSOFT";
@@ -89,7 +91,7 @@ function App() {
           <Route path="/products" element={<Products />}></Route>
           <Route path="/cart" element={<ProductCart />}></Route>
           <Route path="/login" element={<LoginUser />}></Route>
-          <Route path = "/muidemo1" element ={<MuiDemo2/>}></Route>
+          <Route path = "/muidemo1" element ={<MuiTable2/>}></Route>
         </Routes>
       </ProductContext.Provider>
       {/* <Footer /> */}
