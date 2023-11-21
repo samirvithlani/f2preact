@@ -37,10 +37,16 @@ export const Navbar = () => {
               </Link>
             </li>
             <li class="nav-item">
+              <Link class="nav-link" to="/muidashboard">
+              muidashboard
+                            </Link>
+            </li>
+            <li class="nav-item">
               <Link class="nav-link" to="/contactemp">
                 CONTACT EMP
               </Link>
             </li>
+            
 
             <li class="nav-item">
               <Link class="nav-link" to="/apidemo1">

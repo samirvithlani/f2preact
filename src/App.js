@@ -38,6 +38,7 @@ import { MuiDemo1 } from "./Material/MuiDemo1";
 import { MuiDemo2 } from "./Material/MuiDemo2";
 import { MuiTable } from "./Material/MuiTable";
 import { MuiTable2 } from "./Material/MuiTable2";
+import { MaterialDashBoard } from "./Material/MaterialDashBoard";
 
 function App() {
   var title = "ROYAL TECHNOSOFT";
@@ -62,6 +63,7 @@ function App() {
       {/* <EmployeeAdd/> */}
       <ProductContext.Provider value={{ sharedData, setsharedData }}>
         <Navbar />
+        
         <Routes>
           {/* //protected routes start */}
           <Route element={<ProtectedRoutes />}>
@@ -92,6 +94,7 @@ function App() {
           <Route path="/cart" element={<ProductCart />}></Route>
           <Route path="/login" element={<LoginUser />}></Route>
           <Route path = "/muidemo1" element ={<MuiTable2/>}></Route>
+          <Route path ="/muidashboard" element={<MaterialDashBoard/>}></Route>
         </Routes>
       </ProductContext.Provider>
       {/* <Footer /> */}
